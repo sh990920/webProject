@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h3>&lt;도서관 회원 가입&gt;</h3>
+		<!-- HTML entity -->
+		<!-- less than	 /	greater then -->
+		<lable>이름 : </lable> <input id="tx_name" type="text"> <br>
+		<lable>학번 : </lable> <input id="tx_sId" type="text"> <br>
+		<input type="button" value="가입" onclick="tx_write()"> <br>
+		<br>
+		<div id="tx"></div>
+		
+		<script>
+			function tx_write(){
+				var tx_name = document.querySelector("#tx_name");
+				var tx_sId = document.querySelector("#tx_sId");
+				var tx = document.querySelector("#tx");
+				tx.innerText = tx_name.value + "님(학번 : " + tx_sId.value + ")";
+			}
+		</script>
+		
+		
+	</body>
+</html>

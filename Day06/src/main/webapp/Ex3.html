@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		
+		<p>당신의 이름을 입력 하세요</p>
+		<input id="name" type="text" value="">
+		<input type="button" value="당신의 이름은" onclick="btn_click()">
+		
+		<!-- 당신의 이름을 입력 하세요. <br>
+		<input id="tx_name" type="text">
+		<input type="button" value="당신의 이름은?"
+		onclick="welcome()"> -->
+		
+		<!-- script는 아래에 써주는게 좋다 -->
+		<script>
+			function btn_click(){
+				var text = document.getElementById("name");
+				alert(text.value + "님, 환영합니다.");
+			}
+			
+			/*
+			function welcome(){
+				변수 이름과 id(tag, class)의 이름과 같게 작성
+				var tx_name = document.getElementById("tx_name");
+				alert(tx_name.value);
+			}
+			*/
+			
+		</script>
+	</body>
+</html>

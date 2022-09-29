@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+	</head>
+	<body>
+	 	<h2 id="text">지금은 데이모드 입니다.</h2>
+		<input id="btn" type="button" value="다크모드" onclick="mode()">
+		
+		
+		<script>
+		var count = true;
+			function mode(){
+				var text = document.getElementById("text");
+				var btn = document.getElementById("btn");
+				if(count == true){
+					document.body.style.backgroundColor = 'black';
+					text.style.color ="white";
+					text.innerText="지금은 다크모드 입니다.";
+					btn.value="데이모드";
+					btn.style.color="black";
+					btn.style.backgroundColor="white";
+					count = false;
+				}else {
+					document.body.style.backgroundColor = 'white';
+					text.style.color ="black";
+					text.innerText="지금은 데이모드 입니다.";
+					btn.value="다크모드";
+					btn.style.color="white";
+					btn.style.backgroundColor="black";
+					count = true;
+				}
+			}
+		</script>
+	</body>
+</html>

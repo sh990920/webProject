@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<input id="text" type="text">
+		<input id="setValue" type="button" value="setValue" onclick="setValue()">
+		<input id="setInnerText" type="button" value="setInnerText" onclick="setInnerText()">
+		<input id="getValue" type="button" value="getValue" onclick="getValue()">
+		<input id="getInnerText" type="button" value="getInnerText" onclick="getInnerText()">
+		
+		<script>
+		var text = document.getElementById("text");
+			function setValue(){
+				text.value="들어가지롱";
+			}
+			function setInnerText(){
+				text.innerText="들어감";
+			}
+			function getValue(){
+				alert(text.vlaue);
+			}
+			function getInnerText(){
+				alert(text.innerText);
+			}
+			
+		</script>
+		
+	</body>
+</html>

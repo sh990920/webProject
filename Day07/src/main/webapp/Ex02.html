@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<!-- <h2>&lt;input&gt;태그는 HTML5 부터 닫는 태그가 있다? 없다?</h2>
+			<input id="check" type="radio" name="check" value="있다">있다<br>
+			<input id="check" type="radio" name="check" value="없다">없다<br>
+			<input id="check" type="button" value="정답 확인" onclick="check()">
+			<script>
+				function check(){
+					var btn_check = document.querySelector("#check");
+					btn_check.forEach((noed){
+						if(node.checked){
+							alert(node.vlaue);
+						}
+					})
+				}
+			</script> -->
+		<input type='radio' name='check' value='있다' />있다<br>
+		<input type='radio' name='check' value='없다' />없다<br>
+		<button onclick='getAnswer()'>정답 확인</button>
+		<script>
+		function getAnswer() {
+			  var answerNodeList
+			  = document.getElementsByName('check');
+			  
+			  answerNodeList.forEach((node) => {
+			    if(node.checked)  {
+			        alert(node.value);
+			    }
+			  }) 
+			}
+		</script>
+	
+	</body>
+</html>
