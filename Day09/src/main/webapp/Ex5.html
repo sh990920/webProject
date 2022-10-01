@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<input type="button" value="지금 날짜와 시간은? 1번째 방법" onclick="alert(Date())"><br>
+		<input id="btn_date2" type="button" value="지금 날짜와 시간은? 2번째 방법"><br>
+		<input id="btn_date3" type="button" value="지금 날짜와 시간은? 3번째 방법">
+		<script>
+			let btn_date2 = document.getElementById("btn_date2");
+			btn_date2.onclick = function(){
+				alert(Date());
+			}
+			
+			let btn_date3 = document.getElementById("btn_date3");
+			btn_date3.addEventListener("click", check);
+			function check(){
+				alert(Date());
+			}
+		</script>
+	</body>
+</html>
