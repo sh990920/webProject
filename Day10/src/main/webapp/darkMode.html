@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>DarkMode</title>
+</head>
+<body>
+	지금은
+	<span id="tx_mode">데이모드</span> 입니다.
+	<br>
+	<input id="btn_mode" type="button" value="다크모드">
+	
+	<script>
+		const tx_mode = document.getElementById("tx_mode");
+		const btn_mode = document.getElementById("btn_mode");
+		btn_mode.addEventListener("click", changeMode);
+		
+		function changeMode(){
+			if(btn_mode.value == "다크모드"){
+				tx_mode.innerText = "다크모드";
+				btn_mode.value = "데이모드";
+				document.body.style.backgroundColor = "black";
+				document.body.style.color="white";
+			}else{
+				tx_mode.innerText = "데이모드";
+				btn_mode.value = "다크모드";
+				document.body.style.backgroundColor = "white";
+				document.body.style.color="black";
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<input id="num1" type="number">
+	<input id="num2" type="number">
+	<br>
+	
+	<input class="btn_calc" type="button" value="+">
+	<input class="btn_calc" type="button" value="-">
+	<input class="btn_calc" type="button" value="x">
+	<input class="btn_calc" type="button" value="/">
+	<br>
+	
+	<label> 결과 : </label>
+	<span id="result"></span>
+	
+	<script>
+		const num1 = document.getElementById("num1"); // 첫번째 숫자
+		const num2 = document.getElementById("num2"); // 두번째 숫자
+		
+		const result = document.getElementById("result");
+		
+		const btn_calc = document.getElementsByClassName("btn_calc");
+		//btn을 리스트로 받아옴
+		for(let i = 0; i < btn_calc.length; i++){
+			btn_calc[i].addEventListener("click", function(){
+				btn_calc[i].style.backgroundColor = "red";
+				calc(i);
+			})
+		}
+		
+		function calc(oper){
+			const n1 = Number(num1.value);
+			const n2 = Number(num2.value);
+			switch(oper){
+			case 0 : // +
+				result.innerText = n1 + n2;
+				break;
+			case 1 : // -
+				result.innerText = n1 - n2;
+				break;
+			case 2 : // *
+				result.innerText = n1 * n2;
+				break;
+			case 3 : // /
+				if(n2 == 0){
+					/* 
+					JavaScript 값 비교
+					== 	: 값만 비교
+					=== :변수의 타입과 값을 비교
+					*/
+					result.innerText = "0으로 나눌 수 없습니다.";
+				}else{
+					result.innerText = n1 / n2;	
+				}
+				break;
+			}
+		}
+		
+	</script>
+</body>
+</html>
